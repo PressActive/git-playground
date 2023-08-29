@@ -1,25 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="cn">
 <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Responsive Web Page</title>
 	<style>
+
+        header {
+			background-color: black;
+			color: white;
+			padding: 0 20px 20px 20px;
+			text-align: center;
+            position: relative;
+            height: 70px;
+            border: 1px solid red;
+		}
+
+        #logo {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        #title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -100%);
+        }
+
+		footer {
+			background-color: black;
+			color: white;
+			padding: 20px;
+			text-align: center;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+            height: 100px;
+		}
 		.container {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
 			justify-content: center;
 			margin: 0 auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
 			max-width: 800px;
 		}
 
 		.image {
 			flex-basis: 50%;
 			padding-right: 20px;
+            width: 250px; /* Add this line to fix the width of the image */
+            height: 250px;
+            text-align: center;
 		}
 
 		.info {
 			flex-basis: 50%;
 			padding-left: 20px;
+			display: flex;
+			flex-direction: column; /* Add this line to align h2 and p tags vertically */
+			align-items: center;
+			justify-content: center;
 		}
 
 		button {
@@ -32,20 +78,52 @@
 			font-size: 16px;
 			border: none;
 			cursor: pointer;
+            margin-right: 10px; /* Add this line to create space between buttons */
 		}
+
+        #buttons {
+            display:flex;
+            flex-direction:row;
+        }
+        
+        @media screen and (max-width: 600px) { /* Add this media query to change the layout when screen size is less than or equal to 600px */
+            .container {
+                flex-direction: column; /* Change the direction of flex container to column */
+            }
+            
+            .image {
+                padding-right: 0; /* Remove the right padding of image */
+                padding-bottom: 20px; /* Add bottom padding to create space between image and text */
+                width: 250px; /* Set the width of image to fill the container */
+            }
+            
+            .info {
+                padding-left: 0; /* Remove the left padding of info div */
+            }
+        }
 	</style>
 </head>
 <body>
+    <header>
+		<img id="logo" src="http://via.placeholder.com/150x50" alt="Logo">
+        <h1 id="title">Header Title</h1>
+	</header>
 	<div class="container">
 		<div class="image">
-			<img src="path/to/image.jpg" alt="Image">
+			<img src="http://via.placeholder.com/250x250" alt="Image">
 		</div>
 		<div class="info">
-			<h2>Information</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, velit vel bibendum bibendum, quam sapien luctus sapien, vel malesuada nunc nisl vel eros. Nullam euismod, magna in bibendum bibendum, quam sapien luctus sapien, vel malesuada nunc nisl vel eros.</p>
-			<button>Button 1</button>
-			<button>Button 2</button>
-		</div>
-	</div>
+            <h2>Information</h2> <!-- Add this line to create a vertical space between image and h2 tag -->
+            <br> <!-- Add this line to create a vertical space between h2 and p tags -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, velit vel bibendum bibendum, quam sapien luctus sapien, vel malesuada nunc nisl vel eros. Nullam euismod, magna in bibendum bibendum, quam sapien luctus sapien, vel malesuada nunc nisl vel eros.</p>
+            <div id="buttons">
+			    <button>Button 1</button>
+			    <button>Button 2</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+		<p>Copyright © 2023</p>
+	</footer>
 </body>
 </html>
