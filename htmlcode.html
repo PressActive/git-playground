@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive Web Page</title>
+	<style>
+		.container {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto;
+			max-width: 800px;
+		}
+
+		.image {
+			flex-basis: 50%;
+			padding-right: 20px;
+		}
+
+		.info {
+			flex-basis: 50%;
+			padding-left: 20px;
+		}
+
+		button {
+			display: block;
+			margin-top: 20px;
+			padding: 10px 20px;
+			border-radius: 5px;
+			background-color: #4CAF50;
+			color: white;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="image">
+			<img src="path/to/image.jpg" alt="Image">
+		</div>
+		<div class="info">
+			<h2>Information</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, velit vel bibendum bibendum, quam sapien luctus sapien, vel malesuada nunc nisl vel eros. Nullam euismod, magna in bibendum bibendum, quam sapien luctus sapien, vel malesuada nunc nisl vel eros.</p>
+			<button>Button 1</button>
+			<button>Button 2</button>
+		</div>
+	</div>
+</body>
+</html>
